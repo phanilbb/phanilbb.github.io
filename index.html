@@ -210,7 +210,29 @@
         th {
             background-color: #bb5;
         }
-                    @media screen and (max-width: 768px) {
+        .download-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer; /* Ensures cursor changes */
+            transition: background 0.3s ease-in-out;
+            text-decoration: none; /* Removes underline */
+            display: inline-block; /* Ensures proper button-like behavior */
+        }
+        .download-btn:hover {
+            background-color: #0088cc;
+        }
+        @media print {
+            .download-btn { display: none; }
+        }
+        @media screen and (max-width: 768px) {
             .container {
                 max-width: 95%;
                 margin: 20px auto;
@@ -254,24 +276,32 @@
             td {
                 padding: 5px;
             }
+            .download-btn {
+                top: 10px; /* Move button slightly higher */
+                right: 10px; /* Adjust right padding */
+                padding: 8px 12px; /* Reduce padding */
+                font-size: 10px; /* Reduce text size */
+            }
         }
+
     </style>
 </head>
 <body>
+<a href="resume/PHANINDRA KUMAR RESUME.pdf" download class="download-btn">Download Resume as PDF</a>
 <div class="container">
     <header class="header-container">
-        <img src="phanindra kumar.jpg" alt="Phanindra Kumar" class="profile_pic"/>
+        <img src="images/phanindra kumar.jpg" alt="Phanindra Kumar" class="profile_pic"/>
         <div class="header-content">
             <h1>Phanindra Kumar Labba</h1>
-            <p class="contact"><img src="address.png" alt="Address" class="icon"/> Kondapur, Hyderabad, 500084 </p>
-            <p class="contact"><img src="phone.png" alt="Phone" class="icon"/> +91 7032577833 &nbsp &nbsp &nbsp<img
-                    src="email.png"
+            <p class="contact"><img src="contact-icons/address.png" alt="Address" class="icon"/> Kondapur, Hyderabad, 500084 </p>
+            <p class="contact"><img src="contact-icons/phone.png" alt="Phone" class="icon"/> +91 7032577833 &nbsp &nbsp &nbsp<img
+                    src="contact-icons/email.png"
                     alt="Email"
                     class="icon"/> <a
                     href="mailto:phanilbb@gmail.com"> phanilbb@gmail.com </a></p>
-            <p class="contact"><img src="linkedin.png" alt="LinkedIn" class="icon"/> <a
+            <p class="contact"><img src="contact-icons/linkedin.png" alt="LinkedIn" class="icon"/> <a
                     href="https://www.linkedin.com/in/phani173/" target="_blank"> linkedin-phanilbb &nbsp &nbsp &nbsp
-            </a> <img src="instagram.png" alt="Instagram" class="icon"/> <a href="https://www.instagram.com/phani_173_">
+            </a> <img src="contact-icons/instagram.png" alt="Instagram" class="icon"/> <a href="https://www.instagram.com/phani_173_">
                 insta-phanilbb</a></p>
         </div>
     </header>
@@ -448,6 +478,7 @@
     <div class="footer">
         <p>© 2025 Phanindra Kumar Labba. All Rights Reserved.</p>
     </div>
+
 </div>
 <script>
     const text =
