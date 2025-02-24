@@ -5,7 +5,7 @@ window.profileData = {
     phone: "+91 7032577833",
     email: "phanilbb@gmail.com",
     linkedin: "linkedin-phanilbb",
-    instagram: "instagram-phanilbb",
+    instagram: "insta-phanilbb",
     linkedin_url: "https://www.linkedin.com/in/phani173/",
     resume_url: "https://docs.google.com/document/d/1GDrKkxAAHq0IT2TitCwLvOmv1LPwek6xfMMo9aSfQG8/export?format=pdf",
     instagram_url: "https://www.instagram.com/phani_173_",

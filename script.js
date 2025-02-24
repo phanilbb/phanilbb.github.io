@@ -4,12 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-        let docLink = profileData.resume_url;
-        let button = document.getElementById("download-resume"); // Assuming button has this ID
-        button.addEventListener("click", function () {
-            window.open(docLink, "_blank");
-        });
+    let button = document.getElementById("download-resume");
+    button.addEventListener("click", function () {
+        window.open(profileData.resume_url, "_blank");
     });
 
     document.getElementById("name").innerText = profileData.name;
@@ -74,9 +71,11 @@ document.addEventListener("DOMContentLoaded", function () {
         </tr>`;
     });
 
-    // about me
-    let i = 0;
+    skillsHTML += `</table>`;
+    skillsContainer.innerHTML = skillsHTML;
 
+        // about me
+    let i = 0;
     function typeText() {
         if (i < profileData.about_me.length) {
             document.querySelector(".typing").textContent += profileData.about_me.charAt(i);
@@ -84,10 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(typeText, 50);
         }
     }
-
     typeText();
-
-    skillsHTML += `</table>`;
-    skillsContainer.innerHTML = skillsHTML;
 });
 
