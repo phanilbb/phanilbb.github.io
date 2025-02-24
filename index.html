@@ -4,305 +4,33 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Phanindra Kumar - Portfolio</title>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-            line-height: 2;
-        }
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            background: #111;
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .header-content p {
-            margin: 3px 0;
-        }
-        .profile_pic {
-            width: 200px;
-            height: 200px;
-            border-radius: 20%;
-            object-fit: cover;
-        }
-        .header-content {
-            text-align: right;
-            flex-grow: 1;
-        }
-        .icon {
-            width: 25px;
-            height: 25px;
-            vertical-align: middle;
-            margin-right: 2px;
-        }
-        h1 {
-            color: #00aaff;
-            text-align: center;
-            margin-bottom: -0px;
-            animation: slideIn 2s ease-in-out;
-        }
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        h2 {
-            color: #00aaff;
-            border-bottom: 2px solid #00aaff;
-            padding-bottom: 5px;
-        }
-        h3 {
-            color: #00aaff;
-            padding-bottom: 5px;
-        }
-        .section {
-            margin-bottom: 25px;
-            animation: fadeIn 2s ease-in-out;
-            line-height: 2;
-        }
-        .contact {
-            text-align: center;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        .contact a {
-            color: #00aaff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-        .footer {
-            text-align: center;
-            font-size: 14px;
-            color: #888;
-            margin-top: 30px;
-            animation: fadeIn 3s ease-in-out;
-        }
-        h1,
-        h2 {
-            color: #00aaff;
-            text-align: center;
-        }
-        .about-me {
-            font-size: 1rem;
-            font-weight: bold;
-            height: auto;
-            text-align: left;
-            white-space: normal; /* Allows wrapping */
-        }
-        .typing {
-            display: inline-block;
-            border-right: 3px solid #00aaff;
-            white-space: normal; /* Allows wrapping */
-            overflow: hidden;
-            animation: typing 5s steps(40, end) infinite, blink 0.8s infinite;
-        }
-        .date {
-            font-size: 0.7em;
-            font-style: italic;
-            float: right;
-            color: #bbb; /* Light gray for subtle appearance */
-        }
-        @keyframes blink {
-            50% {
-                border-color: transparent;
-            }
-        }
-        p,
-        li {
-            line-height: 2;
-        }
-        ul {
-            list-style: none; /* Remove default bullets */
-            padding-left: 0;
-        }
-        ul li::before {
-            content: "▶"; /* Blue play button */
-            color: #00aaff; /* Blue color */
-            font-size: 1em;
-            font-weight: bold;
-            display: inline-block;
-            width: 1.2em; /* Align text properly */
-            margin-right: 8px;
-            padding-left: 20px;
-        }
-        h4 {
-            color: white;
-            font-weight: bold;
-            text-align: left;
-            position: relative;
-            text-decoration: underline;
-        }
-        .collapsible {
-            cursor: pointer;
-            background-color: #222;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background 0.3s ease-in-out;
-        }
-        h3::before {
-            content: "▶"; /* Blue play button */
-            color: #00ff00; /* Blue color */
-            font-size: 1em;
-            font-weight: bold;
-            display: inline-block;
-            width: 1.2em; /* Align text properly */
-            margin-right: 8px;
-        }
-        .collapsible:hover {
-            background-color: #333;
-        }
-        .content {
-            display: none;
-            padding: 10px 0;
-        }
-        .collapsible::after {
-            content: " ▼"; /* Down arrow */
-            font-size: 0.8em;
-            color: #00aaff;
-        }
-        .active::after {
-            content: " ▲"; /* Up arrow */
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #bb5;
-        }
-        .download-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #00aaff;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            font-size: 12px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer; /* Ensures cursor changes */
-            transition: background 0.3s ease-in-out;
-            text-decoration: none; /* Removes underline */
-            display: inline-block; /* Ensures proper button-like behavior */
-        }
-        .download-btn:hover {
-            background-color: #0088cc;
-        }
-        @media print {
-            .download-btn { display: none; }
-        }
-        @media screen and (max-width: 768px) {
-            .container {
-                max-width: 95%;
-                margin: 20px auto;
-                padding: 20px;
-            }
-
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .header-content {
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            .contact {
-                font-size: 14px;
-            }
-
-            ul li::before {
-                padding-left: 0;
-            }
-
-            .about-me {
-                font-size: 0.9rem;
-            }
-
-            table {
-                font-size: 12px;
-            }
-
-            th,
-            td {
-                padding: 5px;
-            }
-            .download-btn {
-                top: 10px; /* Move button slightly higher */
-                right: 10px; /* Adjust right padding */
-                padding: 8px 12px; /* Reduce padding */
-                font-size: 10px; /* Reduce text size */
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-<a href="resume/PHANINDRA KUMAR RESUME.pdf" download class="download-btn">Download Resume as PDF</a>
+<button onclick="window.open('#')" class="download-btn"> Download Resume as PDF</button>
 <div class="container">
     <header class="header-container">
         <img src="images/phanindra kumar.jpg" alt="Phanindra Kumar" class="profile_pic"/>
         <div class="header-content">
-            <h1>Phanindra Kumar Labba</h1>
-            <p class="contact"><img src="contact-icons/address.png" alt="Address" class="icon"/> Kondapur, Hyderabad, 500084 </p>
-            <p class="contact"><img src="contact-icons/phone.png" alt="Phone" class="icon"/> +91 7032577833 &nbsp &nbsp &nbsp<img
-                    src="contact-icons/email.png"
-                    alt="Email"
-                    class="icon"/> <a
-                    href="mailto:phanilbb@gmail.com"> phanilbb@gmail.com </a></p>
-            <p class="contact"><img src="contact-icons/linkedin.png" alt="LinkedIn" class="icon"/> <a
-                    href="https://www.linkedin.com/in/phani173/" target="_blank"> linkedin-phanilbb &nbsp &nbsp &nbsp
-            </a> <img src="contact-icons/instagram.png" alt="Instagram" class="icon"/> <a href="https://www.instagram.com/phani_173_">
-                insta-phanilbb</a></p>
+            <h1 id="name"></h1>
+            <p class="contact">
+                <img src="contact-icons/address.png" alt="Address" class="icon"/>
+                <a id="address" href="#" target="_blank"></a>
+            </p>
+            <p class="contact">
+                <img src="contact-icons/phone.png" alt="Phone" class="icon"/>
+                <a id="phone" href="#" target="_blank"></a>
+                &nbsp;&nbsp;&nbsp;
+                <img src="contact-icons/email.png" alt="Email" class="icon"/>
+                <a id="email" href="#" target="_blank"></a>
+            </p>
+            <p class="contact">
+                <img src="contact-icons/linkedin.png" alt="LinkedIn" class="icon"/>
+                <a id="linkedin" href="#" target="_blank"></a>
+                &nbsp;&nbsp;&nbsp;
+                <img src="contact-icons/instagram.png" alt="Instagram" class="icon"/>
+                <a id="instagram" href="#" target="_blank"></a>
+            </p>
         </div>
     </header>
     <div class="section">
@@ -311,208 +39,23 @@
             <span class="typing"></span>
         </p>
     </div>
-    <div class="section">
+    <div class="section" id="work-experience">
         <h2>Work Experience</h2>
-        <h3>Software Development Engineer - III, Acko General Insurance <span class="date">(Sep 2021 - Present)</span>
-        </h3>
-        <h4>SaaS Project - SureOS</h4>
-        <ul>
-            <li>Led the team to design and implement SureOS, a cloud-based SaaS solution designed to manage multi-tenant
-                systems across various industries.
-            </li>
-            <li>Developed key entities, including policy, pricing, client onboarding mechanisms, and centralized client
-                services, facilitating scalability and isolated data management for multiple tenants.
-            </li>
-            <li>Engaged in frequent code reviews and mentorship, ensuring adherence to coding standards and
-                architectural guidelines across the team.
-            </li>
-            <li>Successfully integrated cloud-native solutions, including AWS S3, EventBridge, and Lambda, to enhance
-                system resilience, scalability, and cost-effectiveness.
-            </li>
-        </ul>
-        <h4>Pricing Module for Acko Health and Life Insurance</h4>
-        <ul>
-            <li>Designed and implemented the pricing algorithm, ensuring regulatory compliance and dynamic price
-                adjustments based on risk factors.
-            </li>
-        </ul>
-        <h3>Software Development Engineer - I & II, Goibibo <span class="date">(May 2018 - Sep 2021)</span></h3>
-        <h4>Alternate Availability</h4>
-        <ul>
-            <li>Developed and optimized a feature to suggest alternate travel options when primary options were
-                unavailable, enhancing customer retention and booking flexibility.
-            </li>
-        </ul>
-        <h4>Pay After Confirmation</h4>
-        <ul>
-            <li>Implemented a payment feature allowing customers to confirm bookings before making payments, improving
-                the user experience and conversion rates.
-            </li>
-        </ul>
-        <h4>Booking Retry</h4>
-        <ul>
-            <li>Built a retry mechanism for failed bookings to automatically retry in case of server or network issues,
-                reducing manual intervention and increasing success rates.
-            </li>
-        </ul>
     </div>
-    <div class="section">
+    <div class="section" id="education">
         <h2>Education</h2>
-        <h3>Bachelor of Technology, NIT Silchar <span class="date">(Jun 2014 - Apr 2018)</span></h3>
-        <ul>
-            <li>Gained a strong foundation in electronics, communication systems, and computer science principles, with
-                a focus on algorithms and data structures.
-            </li>
-            <li>Solved numerous algorithmic challenges and coding problems on platforms like LeetCode, HackerRank, and
-                Codeforces, honing skills in problem-solving and optimization.
-            </li>
-            <li>Secured a CPI of 8.47 out of 10.</li>
-        </ul>
-        <h3>Sri Chaitanya Junior College, Visakhapatnam <span class="date">(Jun 2012 - Apr 2014)</span></h3>
-        <ul>
-            <li>Excelled in core subjects like Mathematics, Physics, and Chemistry, achieving a strong academic
-                record.
-            </li>
-            <li>Secured a percentage of 95.8%.</li>
-        </ul>
-        <h3>RCM Loyola English Medium School, Srikakulam <span class="date">(Jun 2011 - Apr 2012)</span></h3>
-        <ul>
-            <li>Achieved a strong academic record across all subjects, with a focus on Mathematics, Science, and
-                Languages.
-            </li>
-            <li>Developed a solid foundation in critical thinking and problem-solving skills, excelling in both academic
-                and extracurricular activities.
-            </li>
-            <li>Secured a CGPA of 9.5 out of 10</li>
-        </ul>
     </div>
     <div class="section">
         <h2>Technical Skills</h2>
-        <table>
-            <tr>
-                <th>Category</th>
-                <th>Skills</th>
-            </tr>
-            <tr>
-                <td><strong>Languages</strong></td>
-                <td>
-                    Python (6 yrs experience)<br/>
-                    Java Spring Boot (3 yrs experience)<br/>
-                    Golang (3 yrs experience)
-                </td>
-            </tr>
-            <tr>
-                <td><strong>AWS & Cloud</strong></td>
-                <td>
-                    Lambda<br/>
-                    S3<br/>
-                    EventBridge<br/>
-                    CloudWatch<br/>
-                    SNS<br/>
-                    SQS<br/>
-                    Kafka<br/>
-                    API Gateway<br/>
-                    IAM Roles & Policies<br/>
-                    AWS Secrets Manager
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Databases</strong></td>
-                <td>
-                    MongoDB (6 yrs experience)<br/>
-                    DynamoDB (3 yrs experience)<br/>
-                    PostgreSQL (3 yrs experience)<br/>
-                    Redis (for caching)<br/>
-                    Amazon S3 (as a Data Store)
-                </td>
-            </tr>
-            <tr>
-                <td><strong>DevOps & CI/CD</strong></td>
-                <td>
-                    Docker<br/>
-                    Kubernetes<br/>
-                    Terraform<br/>
-                    GitHub Actions<br/>
-                    Jenkins<br/>
-                    Helm Charts
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Event-Driven & Messaging</strong></td>
-                <td>
-                    Kafka<br/>
-                    SQS
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Microservices & Architecture</strong></td>
-                <td>
-                    RESTful APIs<br/>
-                    gRPC<br/>
-                    Serverless Architecture<br/>
-                    Hexagonal Architecture
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Testing & Debugging</strong></td>
-                <td>
-                    Postman<br/>
-                    Jacoco<br/>
-                    JUnit<br/>
-                    Mockito<br/>
-                    pytest
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Competencies</strong></td>
-                <td>
-                    Algorithmic Implementation<br/>
-                    Product Development<br/>
-                    System Design & Architecture<br/>
-                    Performance Optimization<br/>
-                    Team Leadership & Mentoring
-                </td>
-            </tr>
-        </table>
+        <div class="section" id="technical-skills">
+            <h2>Technical Skills</h2>
+        </div>
     </div>
     <div class="footer">
         <p>© 2025 Phanindra Kumar Labba. All Rights Reserved.</p>
     </div>
-
 </div>
-<script>
-    const text =
-        "I'm a daydreamer and a night thinker — constantly weaving ideas into reality through code.\n\n\
- Programming isn’t just a profession for me, it’s a passion that fuels my curiosity and drive.\n\n\
- As a backend developer, I love crafting scalable and efficient solutions, ensuring that every line of code contributes to a larger, seamless system.\n\n\
- Challenges excite me, pushing me to solve complex problems with logic and creativity.";
-
-    let i = 0;
-    function typeText() {
-        if (i < text.length) {
-            document.querySelector(".typing").textContent += text.charAt(i);
-            i++;
-            setTimeout(typeText, 50);
-        }
-    }
-    typeText();
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const collapsibles = document.querySelectorAll(".collapsible");
-
-        collapsibles.forEach((header) => {
-            header.addEventListener("click", function () {
-                this.classList.toggle("active");
-                const content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                } else {
-                    content.style.display = "block";
-                }
-            });
-        });
-    });
-</script>
+<script src="data/profile.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
